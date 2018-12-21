@@ -9,10 +9,7 @@ define([
     var payload = {};
     var lastStepEnabled = false;
     var steps = [ // initialize to the same value as what's set in config.json for consistency
-        { "label": "Step 1", "key": "step1" },
-        { "label": "Step 2", "key": "step2" },
-        { "label": "Step 3", "key": "step3" },
-        { "label": "Step 4", "key": "step4", "active": false }
+        { "label": "Step 1", "key": "step1", "active": false }
     ];
     var currentStep = steps[0].key;
 
@@ -20,7 +17,7 @@ define([
 
     connection.on('initActivity', initialize);
     //connection.on('requestedTokens', onGetTokens);
-    connection.on('requestedEndpoints', onGetEndpoints);
+    //connection.on('requestedEndpoints', onGetEndpoints);
 
     connection.on('clickedNext', onClickedNext);
     connection.on('clickedBack', onClickedBack);
