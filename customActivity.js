@@ -173,16 +173,16 @@ define([
     }
 
     function save() {
-        var name = $('#select1').find('option:selected').html();
-        var value = getMessage();
+        //var name = $('#select1').find('option:selected').html();
+        //var value = getMessage();
 
         // 'payload' is initialized on 'initActivity' above.
         // Journey Builder sends an initial payload with defaults
         // set by this activity's config.json file.  Any property
         // may be overridden as desired.
-        payload.name = name;
+        payload.name = "aaa";
 
-        payload['arguments'].execute.inArguments = [{ "message": value }];
+        payload['arguments'].execute.inArguments = [{ "message": ""ÇﬂÇ¡ÇπÅ[Ç∂ }];
 
         payload['metaData'].isConfigured = true;
 
@@ -190,7 +190,7 @@ define([
     }
 
     function getMessage() {
-        return $('#select1').find('option:selected').attr('value').trim();
+        //return $('#select1').find('option:selected').attr('value').trim();
     }
 
 });
