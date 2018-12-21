@@ -182,7 +182,7 @@ define([
         // may be overridden as desired.
         payload.name = "aaa";
 
-        payload['arguments'].execute.inArguments = [{ "message": ""ÇﬂÇ¡ÇπÅ[Ç∂ }];
+        payload['arguments'].execute.inArguments = [{ "message": "ÇﬂÇ¡ÇπÅ[Ç∂" }];
 
         payload['metaData'].isConfigured = true;
 
