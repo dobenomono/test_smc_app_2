@@ -126,6 +126,7 @@ define([
                 $('#step1').show();
                 connection.trigger('updateButton', {
                 	button: 'next',
+                	text: 'done',
                     enabled: Boolean("ÇﬂÇ¡ÇπÅ[Ç∂")
                 });
                 break;
