@@ -17,7 +17,9 @@ define([
 
     connection.on('initActivity', initialize);
     connection.on('requestedTokens', onGetTokens);
+    console.log("requestedTokens!!!");
     connection.on('requestedEndpoints', onGetEndpoints);
+    console.log("requestedEndpoints!!!");
 
     connection.on('clickedNext', onClickedNext);
     connection.on('clickedBack', onClickedBack);
@@ -28,7 +30,9 @@ define([
         connection.trigger('ready');
         
         connection.trigger('requestTokens');
+        console.log("trigger requestedTokens!!!");
         connection.trigger('requestEndpoints');
+        console.log("trigger requestedEndpoints!!!");
     }
 
     function initialize (data) {
@@ -114,7 +118,7 @@ define([
         // Journey Builder sends an initial payload with defaults
         // set by this activity's config.json file.  Any property
         // may be overridden as desired.
-        payload.name = "aaa";
+        payload.name = "hogehoge";
 
         payload['arguments'].execute.inArguments = [{ "message": value }];
 
