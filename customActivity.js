@@ -127,7 +127,7 @@ define([
                 connection.trigger('updateButton', {
                 	button: 'next',
                 	text: 'done',
-                    enabled: Boolean("ÇﬂÇ¡ÇπÅ[Ç∂")
+                    visible: true
                 });
                 break;
             case 'step2':
