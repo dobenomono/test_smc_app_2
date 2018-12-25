@@ -84,12 +84,12 @@ define([
     }
 
     function onGetTokens (tokens) {
-         Response: tokens = { token: <legacy token>, fuel2token: <fuel api token> }
+         //Response: tokens = { token: <legacy token>, fuel2token: <fuel api token> }
          console.log(tokens);
     }
 
     function onGetEndpoints (endpoints) {
-         Response: endpoints = { restHost: mclp02php9wls7df1bx1mtn7jrp4.rest.marketingcloudapis.com }
+         //Response: endpoints = { restHost: mclp02php9wls7df1bx1mtn7jrp4.rest.marketingcloudapis.com }
          console.log(endpoints);
     }
 
