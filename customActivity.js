@@ -18,8 +18,10 @@ define([
     connection.on('initActivity', initialize);
     connection.on('requestedTokens', onGetTokens);
     console.log("requestedTokens!!!");
+    console.log(connection.on('requestedTokens', onGetTokens));
     connection.on('requestedEndpoints', onGetEndpoints);
     console.log("requestedEndpoints!!!");
+    console.log(connection.on('requestedEndpoints', onGetEndpoints));
 
     connection.on('clickedNext', onClickedNext);
     connection.on('clickedBack', onClickedBack);
@@ -31,8 +33,10 @@ define([
         
         connection.trigger('requestTokens');
         console.log("trigger requestedTokens!!!");
+        console.log(connection.trigger('requestTokens'));
         connection.trigger('requestEndpoints');
         console.log("trigger requestedEndpoints!!!");
+        console.log(connection.trigger('requestEndpoints'));
     }
 
     function initialize (data) {
