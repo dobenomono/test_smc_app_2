@@ -26,26 +26,9 @@ define([
     function onRender() {
         // JB will respond the first time 'ready' is called with 'initActivity'
         connection.trigger('ready');
-
+        
         connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
-
-        // Disable the next button if a value isn't selected
-        $('#select1').change(function() {
-            var message = getMessage();
-            connection.trigger('updateButton', { button: 'next', enabled: Boolean(message) });
-
-            $('#message').html(message);
-        });
-
-        // Toggle step 4 active/inactive
-        // If inactive, wizard hides it and skips over it during navigation
-        $('#toggleLastStep').click(function() {
-            lastStepEnabled = !lastStepEnabled; // toggle status
-            steps[3].active = !steps[3].active; // toggle active
-
-            connection.trigger('updateSteps', steps);
-        });
     }
 
     function initialize (data) {
@@ -70,17 +53,6 @@ define([
                 }
             });
         });
-
-        // If there is no message selected, disable the next button
-        if (!message) {
-            showStep(null, 1);
-            //connection.trigger('updateButton', { button: 'next', enabled: false });
-            // If there is a message, skip to the summary step
-        } else {
-            $('#select1').find('option[value='+ message +']').attr('selected', 'selected');
-            $('#message').html(message);
-            showStep(null, 3);
-        }
     }
 
     function onGetTokens (tokens) {
@@ -136,6 +108,7 @@ define([
     function save() {
         //var name = $('#select1').find('option:selected').html();
         //var value = getMessage();
+        var value = "hogehoge";
 
         // 'payload' is initialized on 'initActivity' above.
         // Journey Builder sends an initial payload with defaults
@@ -143,7 +116,7 @@ define([
         // may be overridden as desired.
         payload.name = "aaa";
 
-        payload['arguments'].execute.inArguments = [{ "message": "ÇﬂÇ¡ÇπÅ[Ç∂" }];
+        payload['arguments'].execute.inArguments = [{ "message": value }];
 
         payload['metaData'].isConfigured = true;
 
