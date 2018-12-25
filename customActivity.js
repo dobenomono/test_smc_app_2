@@ -9,8 +9,7 @@ define([
     var payload = {};
     var lastStepEnabled = false;
     var steps = [ // initialize to the same value as what's set in config.json for consistency
-        { "label": "Step 1", "key": "step1" },
-        { "label": "Step 2", "key": "step2" }
+        { "label": "Step 1", "key": "step1" }
     ];
     var currentStep = steps[0].key;
 
@@ -127,53 +126,9 @@ define([
                 $('#step1').show();
                 connection.trigger('updateButton', {
                 	button: 'next',
-                	text: 'next',
+                	text: 'done',
                     visible: true
                 });
-                connection.trigger('updateButton', {
-                    button: 'back',
-                    visible: false
-                });
-                break;
-                
-            case 'step2':
-                $('#step2').show();
-                connection.trigger('updateButton', {
-                    button: 'back',
-                    visible: true
-                });
-                connection.trigger('updateButton', {
-                    button: 'next',
-                    text: 'done',
-                    visible: true
-                });
-                break;
-                
-                
-                
-                
-            case 'step3':
-                $('#step3').show();
-                connection.trigger('updateButton', {
-                     button: 'back',
-                     visible: true
-                });
-                if (lastStepEnabled) {
-                    connection.trigger('updateButton', {
-                        button: 'next',
-                        text: 'next',
-                        visible: true
-                    });
-                } else {
-                    connection.trigger('updateButton', {
-                        button: 'next',
-                        text: 'done',
-                        visible: true
-                    });
-                }
-                break;
-            case 'step4':
-                $('#step4').show();
                 break;
         }
     }
