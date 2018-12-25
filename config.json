@@ -26,21 +26,21 @@
                     "foundSignupDate": ""
                 }
             ],
-            "url": "https://testsmcapp3.herokuapp.com//execute"
+            "url": "https://testsmcapp3.herokuapp.com/execute"
         }
     },
     "configurationArguments": {
        "save": {
-           "url": "https://testsmcapp3.herokuapp.com//save"
+           "url": "https://testsmcapp3.herokuapp.com/save"
        },
        "publish": {
-           "url": "https://testsmcapp3.herokuapp.com//publish"
+           "url": "https://testsmcapp3.herokuapp.com/publish"
        },
        "validate": {
-           "url": "https://testsmcapp3.herokuapp.com//validate"
+           "url": "https://testsmcapp3.herokuapp.com/validate"
        },
        "stop": {
-           "url": "https://testsmcapp3.herokuapp.com//stop"
+           "url": "https://testsmcapp3.herokuapp.com/stop"
        }
     },
     "wizardSteps": [
