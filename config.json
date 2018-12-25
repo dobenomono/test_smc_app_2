@@ -7,7 +7,7 @@
     "type": "REST",
     "lang": {
        "en-US": {
-           "name": "custom activity2",
+           "name": "custom activity2_2",
            "description": "An example REST activity using workflow API v1.1 format."
        }
     },
