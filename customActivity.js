@@ -124,6 +124,10 @@ define([
         switch(currentStep.key) {
             case 'step1':
                 $('#step1').show();
+                connection.trigger('updateButton', {
+                	button: 'next',
+                    enabled: Boolean("ÇﬂÇ¡ÇπÅ[Ç∂")
+                });
                 break;
             case 'step2':
                 $('#step2').show();
